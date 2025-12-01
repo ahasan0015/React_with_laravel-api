@@ -1,64 +1,50 @@
-import React from "react";
+// import React from "react";
+
+import { NavLink } from "react-router-dom";
 
 
-export default function Sidebar() {
+ function Sidebar() {
   return (
-    <div
-      className="d-flex flex-column flex-shrink-0 p-3 bg-light shadow-sm"
-      style={{ width: "250px", height: "100vh", position: "fixed" }}
-    >
+     
+    <div className="sidebar d-flex flex-column p-3 bg-light shadow-sm">
       {/* Brand */}
-      <a
-        href="/"
-        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
-      >
-        <span className="fs-4 fw-bold text-primary">MyPanel</span>
-      </a>
-      <hr />
+      <NavLink className="sidebar-brand mb-4 fw-bold text-decoration-none" to="/">
+        <span className="text-primary">Travel</span>Portal
+      </NavLink>
+
 
       {/* Menu */}
       <ul className="nav nav-pills flex-column mb-auto">
-
         <li className="nav-item">
-          <a href="/" className="nav-link active">
-            <i className="bi bi-house-door me-2"></i>
-            Dashboard
-          </a>
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/">
+            🏠 Dashboard
+          </NavLink>
         </li>
-
         <li>
-          <a href="/users" className="nav-link text-dark">
-            <i className="bi bi-people me-2"></i>
-            Users
-          </a>
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/flight">
+            ✈️ Flight Management
+          </NavLink>
         </li>
-
         <li>
-          <a href="/products" className="nav-link text-dark">
-            <i className="bi bi-box-seam me-2"></i>
-            Products
-          </a>
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/hotel">
+            🏨 Hotel Management
+          </NavLink>
         </li>
-
         <li>
-          <a href="/orders" className="nav-link text-dark">
-            <i className="bi bi-bag me-2"></i>
-            Orders
-          </a>
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/rent-car">
+            🚗 Rent a Car
+          </NavLink>
         </li>
-
         <li>
-          <a href="/settings" className="nav-link text-dark">
-            <i className="bi bi-gear me-2"></i>
-            Settings
-          </a>
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/settings">
+            ⚙️ Settings
+          </NavLink>
         </li>
-
       </ul>
 
       <hr />
 
-      {/* Profile */}
+      {/* Profile Section */}
       <div className="dropdown">
         <a
           href="#"
@@ -72,20 +58,14 @@ export default function Sidebar() {
           />
           <strong>Admin</strong>
         </a>
-
         <ul className="dropdown-menu text-small shadow">
-          <li>
-            <a className="dropdown-item" href="/profile">Profile</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="/settings">Settings</a>
-          </li>
+          <li><NavLink className="dropdown-item" to="/profile">Profile</NavLink></li>
+          <li><NavLink className="dropdown-item" to="/settings">Settings</NavLink></li>
           <li><hr className="dropdown-divider" /></li>
-          <li>
-            <a className="dropdown-item" href="/logout">Logout</a>
-          </li>
+          <li><NavLink className="dropdown-item" to="/logout">Logout</NavLink></li>
         </ul>
       </div>
     </div>
   );
 }
+ export default Sidebar;

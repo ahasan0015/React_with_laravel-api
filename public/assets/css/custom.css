@@ -1,3 +1,37 @@
-body{
-    background-color: antiquewhite;
+/* Navbar links */
+.navbar .nav-link {
+  position: relative;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* Bootstrap primary color */
+}
+
+/* Underline animation on hover */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.navbar .nav-link.active {
+  color: #0d6efd;
+}
+
+.navbar .nav-link.active::after {
+  width: 100%;
 }

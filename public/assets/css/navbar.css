@@ -1,44 +1,57 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+/* Navbar Links */
+.navbar.navbar-expand-lg .nav-link {
+  position: relative;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0.75rem;
 }
 
-/* Top navbar */
-.travel-navbar {
-  position: fixed;
-  top: 0;
+/* Hover color */
+.navbar.navbar-expand-lg .nav-link:hover {
+  color: #0d6efd;
+}
+
+/* Animated underline */
+.navbar.navbar-expand-lg .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
   left: 0;
-  right: 0;
-  z-index: 1030;
-  background-color: #1c7ed6;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  bottom: -4px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
 }
 
-.travel-navbar .navbar-brand,
-.travel-navbar .nav-link,
-.travel-navbar .btn-outline-light {
-  color: #fff;
-  transition: all 0.3s;
+.navbar.navbar-expand-lg .nav-link:hover::after {
+  width: 100%;
 }
 
-.travel-navbar .nav-link:hover {
-  color: #dbe9ff;
-  transform: translateY(-2px);
+/* Active link */
+.navbar.navbar-expand-lg .nav-link.active {
+  color: #0d6efd;
 }
 
-.travel-navbar .nav-link.active {
-  font-weight: 600;
-  border-bottom: 2px solid #fff;
+.navbar.navbar-expand-lg .nav-link.active::after {
+  width: 100%;
 }
 
-.travel-navbar .btn-outline-light:hover {
-  background-color: #fff;
-  color: #1c7ed6;
-  border-color: #fff;
+/* Login Button */
+.navbar.navbar-expand-lg .btn-primary {
+  transition: all 0.3s ease;
 }
 
-/* Layout container for sidebar + content */
+.navbar.navbar-expand-lg .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* Responsive spacing for button */
+@media (max-width: 991px) {
+  .navbar .btn-primary {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
