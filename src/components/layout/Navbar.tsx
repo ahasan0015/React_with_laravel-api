@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import "../styles/navbar.css"; // import your custom CSS
+
 
  function Navbar() {
   return (
@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
       <div className="container-fluid">
 
         {/* Brand */}
-        <NavLink className="navbar-brand fw-bold" to="/">
+        <NavLink className="navbar-brand fw-bold" to={"/"}>
           <span className="text-primary">Travel</span>Portal.com
         </NavLink>
 
@@ -33,7 +33,7 @@ import { NavLink } from "react-router-dom";
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
-                to="/flight"
+                to="/flight/search"
               >
                 ✈️ Flight
               </NavLink>

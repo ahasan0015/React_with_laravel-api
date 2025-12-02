@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import api from "../../Config"; // axios instance
-import type { Flight } from "../../interfaces/flight.interface";
-import flightDefault from "../../interfaces/flight.interface";
+// import type { Flight } from "../../interfaces/flight.interface";
+// import flightDefault from "../../interfaces/flight.interface";
+import type {Flight} from "../../interfaces/flight.interface";
+
 
 
 
 function Booking() {
   const { id } = useParams<{ id: string }>();
-  const [flight, setFlight] = useState<Flight>(flightDefault);
+  const [Flight, setFlight] = useState<Flight>(flightDefault);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

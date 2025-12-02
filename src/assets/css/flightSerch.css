@@ -1,0 +1,172 @@
+/* ------------------------------
+   Search Box
+------------------------------ */
+.search-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e5e5e5;
+}
+
+/* Airport selection (From/To box) */
+.airport-box {
+  background: #f8f9fa;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.airport-code {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  color: #666;
+}
+
+/* Search Button */
+.search-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #0056d2;
+  transform: translateY(-1px);
+}
+
+/* Fare Types */
+.fare-type label {
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.fare-type input {
+  margin-right: 5px;
+}
+
+
+/* ------------------------------
+   Flight Result Cards
+------------------------------ */
+.result-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  transition: 0.3s;
+  position: relative;
+}
+
+.result-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Best Deal Tag */
+.best-deal {
+  background: #ff9800;
+  color: #fff;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+
+/* Airline Logo */
+.flight-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Price Box */
+.price-box {
+  text-align: right;
+}
+
+.current-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.select-btn {
+  background: #00a884;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.select-btn:hover {
+  background: #008f71;
+  transform: translateY(-1px);
+}
+
+/* Tags */
+.tag-refund {
+  background: #e3f6e8;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.tag-coins {
+  background: #fff3cd;
+  color: #b8860b;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.view-detail {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.view-detail:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 768px) {
+  .search-box {
+    padding: 18px;
+  }
+
+  .current-price {
+    font-size: 18px;
+  }
+
+  .select-btn {
+    width: 100%;
+  }
+
+  .result-card {
+    padding: 16px;
+  }
+}

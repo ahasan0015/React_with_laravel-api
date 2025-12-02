@@ -1,4 +1,7 @@
 
+import "/assets/css/flightSearch.css";
+import "/assets/css/ticket.css";
+
 
 // import './App.css'
 import Layout from './components/layout/Layout'

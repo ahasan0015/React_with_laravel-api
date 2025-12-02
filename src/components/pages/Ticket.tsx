@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../public/assets/css/ticket.css";
+// import "/assets/css/ticket.css";
 
 const BoardingPass = () => {
   return (

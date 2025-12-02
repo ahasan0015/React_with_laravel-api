@@ -7,6 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //js
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+
+
+
 import Error from './components/pages/Error';
 import Layout from './components/layout/Layout';
 import Dashboard from './components/pages/Dashboard';
